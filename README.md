@@ -1,4 +1,4 @@
-# portfolio]
+# My portfolio
 
 skype: ivan.doroshenko
 
