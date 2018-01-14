@@ -1,0 +1,34 @@
+
+.testimonial__slider{
+    padding: 38px 0 83px 0;
+    background: #fff;
+    max-width: 568px;
+    display: flex;
+    justify-content: center;
+     
+                @media screen and (max-width: 580px){
+                 justify-content: center;
+                    margin-top: 0;
+                   max-width: 320px;
+               }
+}
+
+
+    .testimonial__slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .testimonial__slide-heading{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            
+            .testimonial__img{
+                width: 69px;
+                height: 69px;
+                border-radius: 50%;
+            }
+        }

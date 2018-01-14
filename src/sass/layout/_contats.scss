@@ -1,0 +1,26 @@
+.contacts{
+    background: #f2f2f2;
+    padding: 40px 0;
+
+
+}
+
+.contacts__list, 
+.contacts__item{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+  
+}   
+
+
+  .footer-contacts__icon--email {
+        width: 35px;
+    }
+    .footer-contacts__icon--phone {
+        width: 25px;
+    }
+

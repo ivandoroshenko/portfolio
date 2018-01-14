@@ -1,0 +1,39 @@
+.footer{
+    background-color: #2f2f2f;
+    padding: 40px 0;
+    
+    .container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    }
+     a {
+            text-decoration: none;
+            font-style: normal;
+            font-size: 1rem;
+            font-family: $baseFont;
+            color: $baseColor;
+            
+        }
+   address {
+       margin: 0 15px;
+   }
+
+   &__title {
+        display: flex;
+        font-size: 1.25rem;
+        font-family: $baseFont;
+        color: $baseColor;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+   }
+   &__sub-title{
+       @extend .footer__title;
+       font-size:   1rem;
+   }
+}   
+

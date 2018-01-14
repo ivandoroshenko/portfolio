@@ -1,0 +1,38 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "my exam gulp project",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.23.1",
+    "del": "^3.0.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "imagemin-pngquant": "^5.0.1",
+    "perm": "^0.1.1",
+    "sass": "^1.0.0-beta.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivandoroshenko/exam.git"
+  },
+  "author": "ivandoroshenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivandoroshenko/exam/issues"
+  },
+  "homepage": "https://github.com/ivandoroshenko/exam#readme"
+}

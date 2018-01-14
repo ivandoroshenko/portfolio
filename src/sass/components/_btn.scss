@@ -1,0 +1,57 @@
+.btn{
+padding: 7px 22px;
+border-radius: 23px;
+background-color: #cd0a2d;
+
+  
+}
+
+.tours__item-btn{
+margin-top: 30px;
+border: none;
+justify-self: flex-end;
+transition: box-shadow 0.2s ease-out; 
+
+&:hover {
+    box-shadow: 0px 1px 1rem 0 #212124;
+   }
+
+
+    
+}
+.tours__item-link{
+text-decoration: none;
+}
+.tours__item-btn{
+        display: block;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: "bebas_neuebold", sans-serif;
+        font-size: 1.313rem;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+.btn-up {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #e84c3d;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    bottom: 30px;
+    right: 50px;
+    cursor: pointer;
+    display: none;
+    
+}
+.btn-up--shown{
+    display: block;
+    
+}
+.btn-up:hover {
+    transition: all .1s ease-in-out;
+    fill: #fff;
+    background: #e84c3d;
+    
+}

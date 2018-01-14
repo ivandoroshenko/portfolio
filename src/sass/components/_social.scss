@@ -1,0 +1,38 @@
+.social__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
+.social__item {
+    margin-right: 25px;
+    display: flex;
+    width: 46px;
+    height: 46px;
+    
+}
+
+
+.social__link {
+width: 100%;
+display: flex;
+text-decoration: none;
+color: #333;
+font-family: "Font Awesome";
+font-size: 20px;
+font-weight: 400;
+font-size: 2.5rem;
+align-items: center;
+ 
+&:hover{
+    cursor: pointer;
+}
+}
+
+.upwork {
+    width: 40px;
+}
+
+.fa {
+    margin: auto;
+}
