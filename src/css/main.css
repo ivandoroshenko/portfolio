@@ -200,11 +200,10 @@ body {
 .intro {
   width: 100%;
   min-height: 580px;
-  padding-top: 100px;
-  background: url("../img/bg_portfoio.jpeg") center -90px no-repeat;
+  background: url("../../img/pexels-photo-143577.jpeg") center top no-repeat;
   -webkit-background-size: 100% 100%;
           background-size: 100%;
-  padding-top: 70px;
+  padding-top: 30px;
   position: relative; }
   .intro:after {
     position: absolute;
@@ -214,9 +213,12 @@ body {
     background: #000;
     opacity: 0.13;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    z-index: 1; }
   .intro h1, .intro h2, .intro p {
-    text-align: center; }
+    text-align: center;
+    position: relative;
+    z-index: 2; }
   .intro__title {
     font-family: "Montserrat", sans-serif;
     color: #fff;
@@ -238,7 +240,21 @@ body {
 
 .works {
   width: 100%;
-  padding: 100px 0; }
+  padding: 100px 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#89afb9+0,cadadb+100&0.68+0,0.17+49,0.17+100 */
+  /* FF3.6-15 */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(137, 175, 185, 0.68)), color-stop(49%, rgba(169, 196, 202, 0.17)), color-stop(100%, rgba(202, 218, 219, 0.17)));
+  /* Chrome4-9,Safari4-5 */
+  background: -webkit-linear-gradient(top, rgba(137, 175, 185, 0.68) 0%, rgba(169, 196, 202, 0.17) 49%, rgba(202, 218, 219, 0.17) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -o-linear-gradient(top, rgba(137, 175, 185, 0.68) 0%, rgba(169, 196, 202, 0.17) 49%, rgba(202, 218, 219, 0.17) 100%);
+  /* Opera 11.10-11.50 */
+  /* IE10 preview */
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(137, 175, 185, 0.68)), color-stop(49%, rgba(169, 196, 202, 0.17)), to(rgba(202, 218, 219, 0.17)));
+  background: linear-gradient(to bottom, rgba(137, 175, 185, 0.68) 0%, rgba(169, 196, 202, 0.17) 49%, rgba(202, 218, 219, 0.17) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad89afb9', endColorstr='#2bcadadb',GradientType=0 );
+  /* IE6-9 */ }
   .works__title {
     font-family: "Montserrat", sans-serif;
     line-height: 1.1;
@@ -381,8 +397,8 @@ body {
           transform: translate(0); }
 
 .contacts {
-  background: #f2f2f2;
-  padding: 40px 0; }
+  background: #e0eaec;
+  padding: 30px 0; }
 
 .contacts__list,
 .contacts__item {

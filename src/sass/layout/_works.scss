@@ -1,6 +1,14 @@
 .works{
     width: 100%;
     padding: 100px 0;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#89afb9+0,cadadb+100&0.68+0,0.17+49,0.17+100 */
+background: -moz-linear-gradient(top, rgba(137,175,185,0.68) 0%, rgba(169,196,202,0.17) 49%, rgba(202,218,219,0.17) 100%); /* FF3.6-15 */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(137,175,185,0.68)), color-stop(49%,rgba(169,196,202,0.17)), color-stop(100%,rgba(202,218,219,0.17))); /* Chrome4-9,Safari4-5 */
+background: -webkit-linear-gradient(top, rgba(137,175,185,0.68) 0%,rgba(169,196,202,0.17) 49%,rgba(202,218,219,0.17) 100%); /* Chrome10-25,Safari5.1-6 */
+background: -o-linear-gradient(top, rgba(137,175,185,0.68) 0%,rgba(169,196,202,0.17) 49%,rgba(202,218,219,0.17) 100%); /* Opera 11.10-11.50 */
+background: -ms-linear-gradient(top, rgba(137,175,185,0.68) 0%,rgba(169,196,202,0.17) 49%,rgba(202,218,219,0.17) 100%); /* IE10 preview */
+background: linear-gradient(to bottom, rgba(137,175,185,0.68) 0%,rgba(169,196,202,0.17) 49%,rgba(202,218,219,0.17) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad89afb9', endColorstr='#2bcadadb',GradientType=0 ); /* IE6-9 */
 
     &__title {
         font-family: $baseFont; 

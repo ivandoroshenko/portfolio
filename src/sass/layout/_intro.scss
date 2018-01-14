@@ -1,11 +1,11 @@
 .intro {
     width: 100%;
     min-height: 580px;
-    padding-top: 100px;
-    background: url('../img/bg_portfoio.jpeg') center -90px no-repeat;
+    background: url('../../img/pexels-photo-143577.jpeg') center top no-repeat;
     background-size: 100%;
-    padding-top: 70px;
+    padding-top: 30px;
     position: relative;
+    
   
     
     &:after{
@@ -16,12 +16,15 @@
         background: #000;
         opacity: 0.13;
         width: 100%;
-        height: 100%;       
+        height: 100%;
+        z-index: 1;  
     }       
 
     
    h1, h2, p {
        text-align: center;
+       position: relative;
+       z-index: 2;
        
    }
 
