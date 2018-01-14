@@ -47,12 +47,13 @@ text-decoration: none;
 }
 .btn-up--shown{
     display: block;
-    
+    z-index: 99;
 }
 .btn-up:hover {
     transition: all .1s ease-in-out;
     fill: #fff;
     background: #e84c3d;
+
     
 }
 

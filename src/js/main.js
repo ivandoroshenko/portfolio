@@ -30,11 +30,13 @@ $(function() {
 
     //dropdown header
     $(document).scroll(function () {
-        // console.log($(document).scrollTop());
+        console.log($(document).scrollTop());
         if (($(document).scrollTop() > 130)) {
-            $('.header').addClass('header_fixed');
+            $('.header').addClass('header__fixed');
+            $('.nav__link').addClass('nav__link-fixed');
         } else
-            $('.header').removeClass('header_fixed');
+            $('.header').removeClass('nav__link-fixed');
+            $('.header').addClass('header__fixed');
     }); 
 
   
@@ -58,45 +60,4 @@ $(function() {
     
 }); 
 
-//counters
-$(document).scroll(function (e) {
-    e.preventDefault;
-    console.log($(document).scrollTop());
 
-    var counterOffset = $("#counter").offset().top;
-    srollToTop = $(document).scrollTop();
-    console.log(counterOffset);
-    console.log(srollToTop);
-    if (srollToTop > (counterOffset - 500)) {
-        console.log('!!!!');
-
-        // animated counter
-        $('.motorcycles__count-title--small, .motorcycles__count-title--big').each(function () {
-            
-            var $this = $(this),
-                countTo = $this.attr('data-count');
-
-            $({ countNum: $this.text() }).animate({
-                countNum: countTo
-            },
-
-                {
-
-                    duration: 2000,
-                    easing: 'linear',
-                    step: function () {
-                        $this.text(Math.floor(this.countNum));
-                    },
-                    complete: function () {
-                        $this.text((this.countNum));
-                        //alert('finished');
-                    }
-
-                });
-
-
-
-        });
-    }
-
-}); 

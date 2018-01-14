@@ -7,15 +7,10 @@
     align-items: center;
     justify-content: flex-end;
     background: transparent;
-    padding-top: 15px;
+    padding: 15px 30px 0 0;
     
-    
-
-    &_fixed {
-        position: fixed;
-        top: 0;
-        background: #1a1919;
-        opacity: 0.9;
+    &__fixed {
+        color: #2f2f2f;
         transition: all 0.35s ease-out;
     }
 }
@@ -37,6 +32,11 @@
 
 .nav__item {
     margin-right: 30px;
+    padding: 0 2px;
+
+    &:last-child {
+        margin-right: 0;
+    }
     
     .nav__link {
         text-decoration: none;
@@ -44,14 +44,19 @@
         font-size: 16px;
         font-family: 'Montserrat', sans-serif;
         text-transform: uppercase;
+    
+    .nav__link-works {
+    color: #2f2f2f;
+}
            
 
         &:hover {
                 // text-shadow: 1px 4px 1px rgba(0, 0, 0, 0.5);
-                // color:  #1abc9c;
+                color:  #2f2f2f;
+                font-weight: 600;
                 
                 
         }
-    }
+    }   
 }
 
