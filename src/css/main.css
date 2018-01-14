@@ -291,7 +291,9 @@ body {
   margin: 0 30px 30px 0;
   width: 33%;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  text-align: center;
+  background: transparent; }
   .works__item:before {
     content: '';
     margin: 0;
@@ -301,27 +303,82 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(15, 16, 37, 0.7);
+    background-color: rgba(15, 16, 37, 0.9);
     opacity: 0;
     z-index: 1;
     -webkit-transition: opacity 1s ease;
     -o-transition: opacity 1s ease;
     transition: opacity 1s ease;
     will-change: opacity; }
-
-.works__link {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  display: block;
-  width: 100%;
-  height: auto;
-  position: relative;
-  overflow: hidden; }
+  .works__item .works__btn-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: auto;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    overflow: hidden;
+    z-index: 1; }
+  .works__item .works__link {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    display: block;
+    height: auto;
+    margin-right: 20px;
+    cursor: pointer;
+    background-color: rgba(41, 45, 102, 0.9);
+    opacity: 0;
+    -webkit-transition: opacity 2s ease;
+    -o-transition: opacity 2s ease;
+    transition: opacity 2s ease;
+    will-change: opacity; }
+    .works__item .works__link:hover {
+      border: 1px soid white; }
+    .works__item .works__link:last-child {
+      margin-right: 0; }
+    .works__item .works__link .btn {
+      display: block;
+      width: 100%;
+      -webkit-border-radius: 0;
+              border-radius: 0;
+      padding: 10px 0;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      color: #fff;
+      min-width: 240px;
+      background: transparent;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none; }
+      .works__item .works__link .btn:hover {
+        opacity: 0.6; }
 
 .works__img {
   width: 100%;
-  height: 100%;
+  height: 253px;
   -webkit-transition: -webkit-transform 2s ease;
   transition: -webkit-transform 2s ease;
   -o-transition: transform 2s ease;
@@ -347,9 +404,9 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  -webkit-transform: translateY(170px);
-      -ms-transform: translateY(170px);
-          transform: translateY(170px);
+  -webkit-transform: translateY(180px);
+      -ms-transform: translateY(180px);
+          transform: translateY(180px);
   -webkit-transition: -webkit-transform .5s ease-in-out;
   transition: -webkit-transform .5s ease-in-out;
   -o-transition: transform .5s ease-in-out;
@@ -367,16 +424,20 @@ body {
   font-weight: 400;
   margin-top: 13px;
   text-align: center;
-  z-index: 2;
-  -webkit-transform: translate(150%, 170px);
-      -ms-transform: translate(150%, 170px);
-          transform: translate(150%, 170px);
+  z-index: 3;
+  -webkit-transform: translateY(-190px);
+      -ms-transform: translateY(-190px);
+          transform: translateY(-190px);
   -webkit-transition: -webkit-transform .5s ease-in-out;
   transition: -webkit-transform .5s ease-in-out;
   -o-transition: transform .5s ease-in-out;
   transition: transform .5s ease-in-out;
   transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
   will-change: transform; }
+
+.works__item:hover {
+  -webkit-box-shadow: #333 3px 3px 4px;
+          box-shadow: #333 3px 3px 4px; }
 
 .works__item:hover .works__img {
   -webkit-transform: scale(1.3);
@@ -395,6 +456,9 @@ body {
   -webkit-transform: translate(0);
       -ms-transform: translate(0);
           transform: translate(0); }
+
+.works__item:hover .works__link {
+  opacity: 1; }
 
 .contacts {
   background: #BDD5DC;
