@@ -5,7 +5,7 @@ $(function() {
         e.preventDefault();
         console.log($(this).attr('href'));
         var getHref = $(this).attr('href');
-        var jump = $(getHref).offset().top - 150;
+        var jump = $(getHref).offset().top;
         $('html, body').animate({
             scrollTop: jump
         }, 1000);
