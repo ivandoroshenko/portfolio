@@ -200,7 +200,7 @@ body {
 .intro {
   width: 100%;
   min-height: 580px;
-  background: url("../../img/pexels-photo-143577.jpeg") center top no-repeat;
+  background: url("../img/pexels-photo-143577.jpeg") center top no-repeat;
   -webkit-background-size: 100% 100%;
           background-size: 100%;
   padding-top: 30px;
@@ -397,7 +397,7 @@ body {
           transform: translate(0); }
 
 .contacts {
-  background: #e0eaec;
+  background: #BDD5DC;
   padding: 30px 0; }
 
 .contacts__list,
