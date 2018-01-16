@@ -26,10 +26,10 @@
 		
 		<nav class="nav nav--works"> <!-- navigation and soials -->	
 			<ul class="nav__list"><!-- header navigation -->
-				<li class="nav__item"><a href="#home" class="nav__link nav__link--works">Home</a></li>
-				<li class="nav__item"><a href="#about"class="nav__link nav__link--works" >About</a></li>
-				<li class="nav__item"><a href="#works"class="nav__link nav__link--works">Works</a></li>
-				<li class="nav__item"><a href="#contacts"class="nav__link nav__link--works">Contacts</a></li>
+				<li class="nav__item"><a href="index.html"class="nav__link nav__link--works">Home</a></li>
+				<li class="nav__item"><a href="#about" class="nav__link nav__link--works" >About</a></li>
+				<li class="nav__item"><a href="#works" class="nav__link nav__link--works">Works</a></li>
+				<li class="nav__item"><a href="#contacts" class="nav__link nav__link--works">Contacts</a></li>
 			</ul>
 		</nav>
 		
@@ -37,30 +37,49 @@
 
 	<main class="maincontent"> <!-- maincontent -->
 
-		<section class="intro intro__works" id="home"> <!-- intro section -->
+		<section class="intro intro__works"> <!-- intro section -->
 			<div class="container intro_container">
 				<h1 class="intro__title intro__title--works">Motorcycle expedition company</h1>
+				<a href="https://ivandoroshenko.github.io/motorcycle-expedition/dist/" class="works__link project-container--top-link project-container__intro" target="_blank">
+					<button class="btn works__btn">View Live Demo</button>
+				</a>
 			</div>
-			<div class="intro__descr">
-				<h2 class="intro-descr__title">About the Project</h2>
-				<p class="intro-descr__text"></p>
-			</div>
-		</section><!-- /intro section -->
-		
-		<section class="project"><!-- project -->
 			
-			<div class="project__container--top">
-				<img src="img/moto__landskape.png" alt="Mobile" class="project__landskape">
+		</section><!-- /intro section -->
+	
+		<section class="project" id="about"><!-- project -->
+			<div class="project__heading">
+				<h2 class="project__heading-title">About the Project</h2>
+				<p class="project__heading-text">Buiding landing page of the Motorcycle expedition 
+					Company from PSD to HTML5 semantic markup, CSS3 stylisation. Design and developing
+					 JS inteaction & Responsive Web Design. Building website on Sass preprocessor and Gulp 
+					 builder on pure HTML and CSS without Bootstrap and plugins.
+					  Role - the only web developer.
+				</p>
 			</div>
-			<div class="project__container--bottom">
-				<img src="img/moto__portrait.png" alt="Mobile" class="project__portrait">
-				<img src="img/moto__tablet.png" alt="Tablet" class="project__tablet">
+			<div class="project__container--top">
+				<img src="img/moto__landskape.png" alt="Motorcycle expedition company responsive" class="project__landskape">
+			
+				<a href="https://ivandoroshenko.github.io/motorcycle-expedition/dist/" class="works__link project-container--top-link" target="_blank">
+					<button class="btn works__btn">View Live Demo</button>
+				</a>
+			
+			</div>
+			<div class="project__container--bottom" id="works">
+				
+				<img src="img/moto__portrait.png" alt="Motorcycle expedition company responsive" class="project__portrait">
+				<a href="https://ivandoroshenko.github.io/motorcycle-expedition/dist/" class="works__link project-container--top-link project-container--bottom-left" target="_blank">
+					<button class="btn works__btn">View Live Demo</button>
+				</a>
+				<img src="img/moto__tablet.png" alt="Motorcycle expedition company responsive" class="project__tablet">
+				<a href="https://ivandoroshenko.github.io/motorcycle-expedition/dist/" class="works__link project-container--top-link project-container--bottom-right" target="_blank">
+					<button class="btn works__btn">View Live Demo</button>
+				</a>
 			</div>
 		</section> <!-- /project section -->
 	</main> <!-- mainconent -->
 	
 
-	<!-- works -->
 	
 <section class="contacts" id="contacts">
 	<div class="container">
@@ -102,28 +121,30 @@
 			</li>
 		</ul>
 	</div>
-</section>
-<!-- /contacts -->
-	<footer class="footer">
-		<div class="container footer__container">
-			<li class="contacts__item"><h2 class="footer__sub-title">Front-End Web Developer</h2></li>
-			<li class="contacts__item"><h1 class="footer__title">Ivan Doroshenko</h1></li>
-			<li class="contacts__item">
-				<img src="img/icon__emal.png" alt="Email" class="footer-contacts__icon--email">
-					<address class="contacts-adress">
-						<a href="mailto: ivandoroshenko1988@gmail.com" class="footer-contacts-address__link">ivandoroshenko1988@gmail.com</a>
-					</address>
-			</li>
-		
-			<li class="contacts__item">
-				<img src="img/icon__phone.png" alt="Phone" class="footer-contacts__icon--phone">
-					<address class="contacts-adress">
-						<a href="tel: +380958196783" class="footer-contacts-address__link">+38 (095) 81-96-783</a>
-					</address>
-			</li>
-		</ul>
-		</div>
-	</footer>
+</section><!-- /contacts -->
+
+<footer class="footer">
+	<div class="container footer__container">
+		<li class="contacts__item">
+			<h2 class="footer__sub-title">designed and deveoped by</h2>
+	</li>
+		<li class="contacts__item"><h1 class="footer__title">Ivan Doroshenko</h1></li>
+		<li class="contacts__item">
+			<img src="img/icon__emal.png" alt="Email" class="footer-contacts__icon--email">
+				<address class="contacts-adress">
+					<a href="mailto: ivandoroshenko1988@gmail.com" class="footer-contacts-address__link">ivandoroshenko1988@gmail.com</a>
+				</address>
+		</li>
+	
+		<li class="contacts__item">
+			<img src="img/icon__phone.png" alt="Phone" class="footer-contacts__icon--phone">
+				<address class="contacts-adress">
+					<a href="tel: +380958196783" class="footer-contacts-address__link">+38 (095) 81-96-783</a>
+				</address>
+		</li>
+	</ul>
+	</div>
+</footer>
 	<div class="btn-up">
 		<svg xmlns="http://www.w3.org/2000/svg" class="btn-up" width="48" height="48" fill="#e84c3d" viewBox="0 0 48 48">
 			<path d="M14.83 30.83L24 21.66l9.17 9.17L36 28 24 16 12 28z" />

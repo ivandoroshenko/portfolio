@@ -545,6 +545,9 @@ body {
   .footer__sub-title {
     font-size: 1rem; }
 
+.works {
+  position: relative; }
+
 .nav--works a.nav__link--works {
   color: #2f2f2f; }
 
@@ -552,10 +555,10 @@ body {
   background: url("../img/moto-desktop.jpg") center top no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   padding: 50px 0 625px;
   position: relative;
-  margin-bottom: -40px;
   overflow: hidden; }
   .intro__works .intro__title--works {
     margin: 0;
@@ -582,8 +585,67 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad89afb9', endColorstr='#2bcadadb',GradientType=0 );
   /* IE6-9 */ }
 
+.project__heading {
+  margin: 0 auto;
+  padding: 90px 0 0 0;
+  text-align: center;
+  max-width: 611px;
+  min-width: 320px;
+  width: 100%; }
+  .project__heading h1, .project__heading h2 {
+    text-transform: uppercase; }
+
+.project__heading-title, .project__heading-text {
+  margin: 0 0 18px 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 750px;
+  font-size: 1.125 rem;
+  color: #2D6878;
+  font-weight: 700; }
+
+.project__heading-text {
+  max-width: 650px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.5rem; }
+
 .project__container--top {
-  text-align: center; }
+  text-align: center;
+  position: relative; }
+
+.project-container--top-link {
+  position: absolute;
+  left: 40%;
+  bottom: 190px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2; }
+
+.works__btn {
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  background: #ff0432;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  -webkit-box-shadow: #828788 0px -1px 4px 4px;
+          box-shadow: #828788 0px -1px 4px 4px;
+  cursor: pointer; }
+
+.project-container__intro {
+  left: 48.5%;
+  bottom: 300px; }
+
+.project-container--bottom-left {
+  z-index: 5;
+  left: 21%;
+  bottom: 100px; }
 
 .project__landskape {
   position: relative;
@@ -600,3 +662,14 @@ body {
   position: relative;
   z-index: 4;
   left: 7%; }
+
+.project-container--bottom-right {
+  z-index: 5;
+  left: 66%;
+  bottom: 164px; }
+
+.works__btn:hover {
+  background: #fff;
+  color: #ff0432;
+  -webkit-box-shadow: #BDD5DC 0px -1px 4px 4px;
+          box-shadow: #BDD5DC 0px -1px 4px 4px; }
