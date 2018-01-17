@@ -613,7 +613,12 @@ body {
 
 .project__container--top {
   text-align: center;
-  position: relative; }
+  position: relative;
+  width: 100%;
+  padding: 330px 0;
+  background: url("../img/moto__landskape.png ") center center no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover; }
 
 .project-container--top-link {
   position: absolute;
@@ -640,7 +645,7 @@ body {
 
 .project-container__intro {
   left: 48.5%;
-  bottom: 300px; }
+  bottom: 300 px; }
 
 .project-container--bottom-left {
   z-index: 5;

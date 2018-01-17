@@ -79,7 +79,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad89afb9', e
 .project__container--top {
     text-align: center;
     position: relative;
-   
+    width: 100%;
+    padding: 330px 0;
+    background: url('../img/moto__landskape.png ') center center no-repeat;
+    background-size: cover;
 }
 
 .project-container--top-link{
@@ -107,7 +110,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad89afb9', e
 
 .project-container__intro{
     left: 48.5%;
-    bottom: 300px;
+    bottom: 300 px;
 }
 
    
