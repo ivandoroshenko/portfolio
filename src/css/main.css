@@ -150,12 +150,10 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   background: transparent;
-  padding: 15px 30px 0 0; }
-  .header__fixed {
-    color: #2f2f2f;
-    -webkit-transition: all 0.35s ease-out;
-    -o-transition: all 0.35s ease-out;
-    transition: all 0.35s ease-out; }
+  padding: 15px 30px 0 0;
+  -webkit-transition: background-color 0.35s ease-out;
+  -o-transition: background-color 0.35s ease-out;
+  transition: background-color 0.35s ease-out; }
 
 .nav {
   display: -webkit-box;
@@ -191,17 +189,17 @@ body {
   padding: 0 2px; }
   .nav__item:last-child {
     margin-right: 0; }
-  .nav__item .nav__link {
-    text-decoration: none;
-    color: #f2f2f27e;
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase; }
-    .nav__item .nav__link .nav__link-works {
-      color: #2f2f2f; }
-    .nav__item .nav__link:hover {
-      color: #2f2f2f;
-      font-weight: 600; }
+
+.nav__link {
+  text-decoration: none;
+  color: #f2f2f27e;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase; }
+  .nav__link .nav__link-works {
+    color: #2f2f2f; }
+  .nav__link:hover {
+    color: #2f2f2f; }
 
 .intro {
   width: 100%;
@@ -382,6 +380,7 @@ body {
         opacity: 0.6; }
 
 .works__img {
+  display: block;
   width: 100%;
   height: 253px;
   -webkit-transition: -webkit-transform 2s ease;
@@ -666,12 +665,19 @@ body {
 .project__portrait {
   position: relative;
   z-index: 4;
-  left: 7%; }
+  left: 7%;
+  max-width: 583px;
+  padding: 308px 0;
+  background: url("../img/moto__portrait.png") center center no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover; }
 
-.project-container--bottom-right {
-  z-index: 5;
-  left: 66%;
-  bottom: 164px; }
+.project__tablet {
+  max-width: 965px;
+  padding: 330px 0;
+  background: url("../img/moto-tablet.png") center center no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover; }
 
 .works__btn:hover {
   background: #fff;

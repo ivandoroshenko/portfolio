@@ -32,11 +32,12 @@ $(function() {
     $(document).scroll(function () {
         console.log($(document).scrollTop());
         if (($(document).scrollTop() > 130)) {
-            $('.header').addClass('header__fixed');
-            $('.nav__link').addClass('nav__link-fixed');
+            $('.nav__link').addClass('nav__link-works');
+            // $('.nav__link').css("font-weight", "600");
+           
         } else
-            $('.header').removeClass('nav__link-fixed');
-            $('.header').addClass('header__fixed');
+            $('.nav__link').removeClass('nav__link-works');
+     
     }); 
 
   

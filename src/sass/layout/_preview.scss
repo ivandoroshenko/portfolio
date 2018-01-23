@@ -137,12 +137,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad89afb9', e
     position: relative;
     z-index: 4;
     left: 7%;
+    max-width: 583px;
+    padding: 308px 0    ;
+    background: url('../img/moto__portrait.png') center center no-repeat;
+    background-size: cover;
 }   
-.project-container--bottom-right{
-    z-index: 5;
-    left: 66%;
-    bottom: 164px;
-    
+.project__tablet{
+    max-width: 965px;
+    padding: 330px 0;
+    background: url('../img/moto-tablet.png') center center no-repeat;
+    background-size: cover;
 }
 
 .works__btn:hover {
