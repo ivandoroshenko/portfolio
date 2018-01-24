@@ -133,7 +133,9 @@ body {
   margin: auto; }
 
 .header {
-  width: 100%;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -149,11 +151,17 @@ body {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  background: transparent;
-  padding: 15px 30px 0 0;
+  -webkit-border-bottom-left-radius: 15px;
+          border-bottom-left-radius: 15px;
+  padding: 15px 30px;
   -webkit-transition: background-color 0.35s ease-out;
   -o-transition: background-color 0.35s ease-out;
   transition: background-color 0.35s ease-out; }
+
+.header-fixed {
+  background-color: rgba(32, 95, 116, 0.5);
+  -webkit-box-shadow: 1px;
+          box-shadow: 1px; }
 
 .nav {
   display: -webkit-box;
@@ -196,10 +204,11 @@ body {
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase; }
-  .nav__link .nav__link-works {
-    color: #2f2f2f; }
   .nav__link:hover {
     color: #2f2f2f; }
+
+.nav__link-works {
+  color: #2f2f2f; }
 
 .intro {
   width: 100%;
@@ -296,7 +305,12 @@ body {
   overflow: hidden;
   position: relative;
   text-align: center;
-  background: transparent; }
+  background: transparent;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out; }
   .works__item:before {
     content: '';
     margin: 0;
@@ -675,7 +689,7 @@ body {
 .project__tablet {
   max-width: 965px;
   padding: 330px 0;
-  background: url("../img/moto-tablet.png") center center no-repeat;
+  background: url("../img/moto-tablet.jpg") center center no-repeat;
   -webkit-background-size: cover;
           background-size: cover; }
 

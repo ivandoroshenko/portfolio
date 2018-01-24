@@ -44,6 +44,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad89afb9', e
     position: relative;
     text-align: center;
     background: transparent;
+    transition: box-shadow 0.3s ease-in-out;
     
 
       &:before{
