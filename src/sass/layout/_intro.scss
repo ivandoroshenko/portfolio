@@ -1,10 +1,17 @@
 .intro {
     width: 100%;
+    height: 100vh;
     background: url('../img/pexels-photo-143577.jpeg') center top no-repeat;
-    background-size: 100%;
-    padding: 30px 0 335px;
+    background-size: cover;
+    padding: 0;
     position: relative;
     
+    h1, h2, p {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        
+    }
   
     
     &:after{
@@ -19,13 +26,13 @@
         z-index: 1;  
     }       
 
-    
-   h1, h2, p {
-       text-align: center;
-       position: relative;
-       z-index: 2;
-       
-   }
+    &__container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
 
     &__title {
         font-family: $baseFont;
@@ -35,7 +42,8 @@
         text-align: center;
         letter-spacing: 4px;
         font-weight: 700;
-        margin: 30px 0 0;
+        margin: 0;
+        padding: 0; 
     }
 
     &__text,

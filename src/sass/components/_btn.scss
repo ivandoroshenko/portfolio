@@ -39,21 +39,26 @@ text-decoration: none;
     border-radius: 50%;
     position: fixed;
     z-index: 99;
-    bottom: 30px;
+    bottom: -50px;
     right: 50px;
     cursor: pointer;
-    display: none;
+    visibility: hidden;
+    transition: transform 0.5s ease-in-out;
     
 }
 .btn-up--shown{
-    display: block;
+    visibility: visible;
     z-index: 99;
+    transform: translateY(-80px);
 }
-.btn-up:hover {
-    transition: all .1s ease-in-out;
-    fill: #fff;
-    background: #e84c3d;
 
     
+.btn-up:hover  {
+    transition: all .1s ease-in-out;
+    background: #e84c3d;
+
+    svg{
+    fill: #fff;
+    }
 }
 

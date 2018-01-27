@@ -11,5 +11,9 @@ https://ivandoroshenko.github.io/hosting/
 https://ivandoroshenko.github.io/glazer/
 
 https://ivandoroshenko.github.io/weather-forecast/index.html
+https://ivandoroshenko.github.io/weather-forecast/index.html
+https://ivandoroshenko.github.io/weather-forecast/index.html
+https://ivandoroshenko.github.io/weather-forecast/index.html
+https://ivandoroshenko.github.io/weather-forecast/index.html
 
 
