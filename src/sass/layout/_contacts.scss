@@ -5,7 +5,18 @@
 
 }
 
-.contacts__list, 
+.contacts__list{
+    list-style: none;
+  
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+  
+}
+
 .contacts__item{
     display: flex;
     flex-direction: row;
@@ -13,9 +24,13 @@
     align-items: center;
     justify-content: space-between;
     text-decoration: none;
-  
-}   
+    margin-left: 15px;
+}
 
+    
+        
+
+  
 
   .footer-contacts__icon--email {
         width: 35px;

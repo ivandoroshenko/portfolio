@@ -1,6 +1,11 @@
 .works{
     width: 100%;
     padding: 100px 0;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        padding-top: 50px;
+    }
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#89afb9+0,cadadb+100&0.68+0,0.17+49,0.17+100 */
 background: -moz-linear-gradient(top, rgba(137,175,185,0.68) 0%, rgba(169,196,202,0.17) 49%, rgba(202,218,219,0.17) 100%); /* FF3.6-15 */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(137,175,185,0.68)), color-stop(49%,rgba(169,196,202,0.17)), color-stop(100%,rgba(202,218,219,0.17))); /* Chrome4-9,Safari4-5 */
@@ -38,6 +43,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad89afb9', e
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
+        margin-top: 30px;
     }
 }
 
@@ -168,6 +174,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad89afb9', e
     text-transform: uppercase;
     text-align: center;
     transform: translateY(180px);
+      @media screen and (max-width: 768px) {
+        transform: translateY(220px);
+    }
     transition: transform .5s ease-in-out;
     will-change: transform; 
     z-index: 2;
@@ -184,6 +193,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad89afb9', e
     text-align: center;
     z-index: 3;
     transform: translateY(-190px);
+     @media screen and (max-width: 768px) {
+        transform: translateY(-220px);
+    }
     transition: transform .5s ease-in-out;
     will-change: transform; 
 }
