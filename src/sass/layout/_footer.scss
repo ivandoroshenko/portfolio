@@ -2,12 +2,7 @@
     background-color: #2f2f2f;
     padding: 40px 0;
     
-    .container {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-between;
-    }
+   
      a {
             text-decoration: none;
             font-style: normal;
@@ -31,7 +26,7 @@
         margin: 0;
         padding: 0;
 
-            
+
    }
    &__sub-title{
        @extend .footer__title;
