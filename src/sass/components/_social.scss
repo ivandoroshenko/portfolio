@@ -9,7 +9,9 @@
     display: flex;
     width: 46px;
     height: 46px;
-    
+     @media screen and (max-width: 420px) {
+      
+    }
 }
 
 

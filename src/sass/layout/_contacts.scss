@@ -4,39 +4,3 @@
 
 
 }
-
-.contacts__list{
-    list-style: none;
-    padding: 0;
-    margin: 0;  
-    display: flex;
-    flex-flow: row nowrap;
-    list-style: none;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
-  
-}
-
-.contacts__item{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    align-items: center;
-    
-    text-decoration: none;
-    // margin-left: 15px;
-}
-
-    
-        
-
-  
-
-  .footer-contacts__icon--email {
-        width: 35px;
-    }
-    .footer-contacts__icon--phone {
-        width: 25px;
-    }
-
