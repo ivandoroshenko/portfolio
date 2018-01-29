@@ -76,7 +76,7 @@ gulp.task('img', function(){
                 ]
             })
         ])))
-    .pipe(gulp.dest('dist/img'));
+    .pipe(gulp.dest('src/img'));
 });
 
 gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function(){
@@ -94,13 +94,12 @@ var buildCss = gulp.src([
     'src/libs/slick-carousel/slick/ajax-loader.gif'
 ])
     .pipe(gulp.dest('dist/css'));
+var buildHtml = gulp.src('src/*.html')
+        .pipe(gulp.dest('dist'));
 
 var buildFonts = gulp.src('src/fonts/**/*')
     .pipe(gulp.dest('dist/fonts'));
 
 var buildJs = gulp.src('src/js/**/*')
     .pipe(gulp.dest('dist/js'));
-
-var buildHtml = gulp.src('src/*.html')
-    .pipe(gulp.dest('dist'));
 });
