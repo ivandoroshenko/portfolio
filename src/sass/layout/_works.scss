@@ -52,11 +52,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad89afb9', e
 
 .works__item{
     padding: 0;
-    margin: 0;
     list-style: none;
     margin: 0 30px 30px 0;
     width: 45%;
-    &:nth-child(even){
+    &:nth-child(even),
+    &:last-child {
         margin-right: 0;
     }
       @media screen and (max-width: 768px) {
