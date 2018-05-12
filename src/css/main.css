@@ -458,6 +458,7 @@ body {
   -webkit-transform: translateY(200px);
       -ms-transform: translateY(200px);
           transform: translateY(200px);
+  visibility: hidden;
   -webkit-transition: -webkit-transform .5s ease-in-out;
   transition: -webkit-transform .5s ease-in-out;
   -o-transition: transform .5s ease-in-out;
@@ -484,6 +485,7 @@ body {
   -webkit-transform: translateY(-190px);
       -ms-transform: translateY(-190px);
           transform: translateY(-190px);
+  visibility: hidden;
   -webkit-transition: -webkit-transform .5s ease-in-out;
   transition: -webkit-transform .5s ease-in-out;
   -o-transition: transform .5s ease-in-out;
@@ -517,12 +519,14 @@ body {
 .works__item:hover .works__desc-text {
   -webkit-transform: translate(0);
       -ms-transform: translate(0);
-          transform: translate(0); }
+          transform: translate(0);
+  visibility: visible; }
 
 .works__item:hover .works__desc-title {
   -webkit-transform: translate(0);
       -ms-transform: translate(0);
-          transform: translate(0); }
+          transform: translate(0);
+  visibility: visible; }
 
 .works__item:hover .works__link {
   opacity: 1; }
