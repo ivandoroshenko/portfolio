@@ -30,7 +30,6 @@ $(function() {
 
     //dropdown header
     $(document).scroll(function () {
-        console.log($(document).scrollTop());
         if (($(document).scrollTop() > 130)) {
             
             $('.header').addClass('header-fixed'); 

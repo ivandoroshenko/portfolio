@@ -261,6 +261,9 @@ body {
   top: 0;
   left: 0;
   z-index: -100; }
+  @media screen and (max-width: 1260px) {
+    .bg__video {
+      width: auto; } }
 
 .works {
   width: 100%;
