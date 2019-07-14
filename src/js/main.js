@@ -58,7 +58,32 @@ $(function() {
        }
     }); 
     
-    
+    var scripts = document.querySelectorAll('script');
+    let scrtArray = Array.from(scripts)
+    scrtArray.forEach(function (item) {
+        console.log(item.src.indexOf('https://www.google-analytics.com/gtm/js'));
+
+        if (item.src.indexOf('https://www.google-analytics.com/gtm/js') !== -1) {
+            var srcArr = item.src.split('=');
+            // console.log(srcArr);
+
+            //         var gaIDArr = srcArr[2].replace(/\&cid/, '').split('_');
+            //         gaIDArr.shift();
+            //         var gaID = gaIDArr.join('-');
+            //         var contID = srcArr[1];
+            //         var userID = srcArr[3].replace(/&gac/, '');
+            //         var expID = srcArr[4].split('.')[2];
+            //         var testData = { 
+            //             'gaID': gaID, 
+            //             'contID': contID,
+            //             'userID': userID,
+            //             'expID': expID
+            //             }
+            console.log(item);
+            //         return testData
+        }
+        //     return testData;
+    });
 }); 
 
 
