@@ -130,11 +130,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad89afb9', e
             @media screen and (max-width: 1120px) {
               margin: 0 10px;
               padding: 10px 15px;
-            }
-             @media screen and (max-width: 335px) {
-             font-size: 0.5rem;
-            }
-           
+            }           
            
 }
    
@@ -226,6 +222,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad89afb9', e
     .works__item:hover .works__desc-text{
             transform: translate(0);
             visibility: visible;
+            @media screen and (max-width: 768px) {
+               display: nome;
+                
+            }
+            
         }
         .works__item:hover  .works__desc-title{
             transform: translate(0);

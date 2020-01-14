@@ -264,6 +264,11 @@ body {
   @media screen and (max-width: 1260px) {
     .bg__video {
       width: auto; } }
+      @media screen and (max-width: 767px) {
+        video.bg__video {
+          display: none; }
+        
+      }
 
 .works {
   width: 100%;
@@ -420,9 +425,6 @@ body {
       .works__item .works__link {
         margin: 0 10px;
         padding: 10px 15px; } }
-    @media screen and (max-width: 335px) {
-      .works__item .works__link {
-        font-size: 0.5rem; } }
 
 .works__img {
   display: block;
@@ -495,8 +497,9 @@ body {
   transition: transform .5s ease-in-out;
   transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
   will-change: transform; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .works__desc-text {
+      display: none;
       -webkit-transform: translateY(-220px);
           -ms-transform: translateY(-220px);
               transform: translateY(-220px); } }

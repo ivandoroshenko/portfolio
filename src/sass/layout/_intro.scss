@@ -13,6 +13,10 @@
         
     }
 
+    @media screen and (max-width: 767px) {
+        max-height: 100vh;
+    }
+
     &__container {
         position: absolute;
         top: 50%;
@@ -35,6 +39,7 @@
         @media screen and (max-width: 768px) {
             width: 100%;
             font-size: 3rem;
+            max-width: 100vh;
         }
 
         @media screen and (max-width: 424px) {
@@ -72,5 +77,9 @@
 
       @media screen and (max-width: 1260px) {
         width: auto;
+      }
+
+      @media screen and (max-width: 767px) {
+        display: none;
       }
   }
