@@ -28,7 +28,7 @@
       "title": "inlineskatecourse.com",
       "image": "img/skate-fresh.jpg",
       "alt": "Inline Skate Course",
-      "description": "Front-End for inlineskatecourse.com in cooperation with Denis Kliatskii. The project is responsive for all dimensions and orientations of mobile devices. Frontend is now live, using WordPress.",
+      "description": "Front-End for inlineskatecourse.com in cooperation with Denis Kliatskii. The project is responsive for all dimensions and orientations of mobile devices. Front-End is now live, using WordPress.",
       "tags": ["HTML", "CSS", "JavaScript", "Responsive Design", "WordPress"],
       "demo": "https://inlineskatecourse.com/"
     },
@@ -36,7 +36,7 @@
       "title": "Kauf",
       "image": "img/kauf_preview.png",
       "alt": "Kauf Multilingual Website",
-      "description": "2 languages website. Has 3 sliders, 2 of them with video. Creating website layout from PSD to HTML5 semantic markup, JS interaction and CSS3 stylisation, responsive UI design, optimisation of page loading.",
+      "description": "2 languages website. Has 3 sliders, 2 of them with video. Creating website layout from PSD to HTML5 semantic markup, JS interaction and CSS3 stylisation, responsive UI design, optimization of page loading.",
       "tags": ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Multilingual", "Video"],
       "demo": "https://ivandoroshenko.github.io/kauf/src/"
     },

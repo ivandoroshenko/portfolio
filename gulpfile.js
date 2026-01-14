@@ -12,6 +12,7 @@ const plumber      = require('gulp-plumber');
 const cache        = require('gulp-cache');
 const autoprefixer = require('gulp-autoprefixer');
 const fileinclude  = require('gulp-file-include');
+const merge        = require('merge-stream');
 
 // Clean dist folder
 const clean = (done) => {
@@ -169,25 +170,23 @@ const build = gulp.series(
     clean,
     gulp.parallel(img, cssLibs, scripts),
     () => {
-        const buildCss = gulp.src([
-            'src/css/main.css',
-            'src/css/libs.min.css',
-            'src/libs/slick-carousel/slick/fonts/**/*',
-            'src/libs/slick-carousel/slick/ajax-loader.gif'
-        ])
-            .pipe(gulp.dest('dist/css'));
-
-        const buildHtml = gulp.src('src/*.html')
-            .pipe(gulp.dest('dist'));
-
-        const buildFonts = gulp.src('src/fonts/**/*')
-            .pipe(gulp.dest('dist/fonts'));
-
-        const buildJs = gulp.src('src/js/**/*')
-            .pipe(gulp.dest('dist/js'));
-
-        return gulp.src('src/video/**/*')
-            .pipe(gulp.dest('dist/video'));
+        return merge(
+            gulp.src([
+                'src/css/main.css',
+                'src/css/libs.min.css',
+                'src/libs/slick-carousel/slick/fonts/**/*',
+                'src/libs/slick-carousel/slick/ajax-loader.gif'
+            ])
+                .pipe(gulp.dest('dist/css')),
+            gulp.src('src/*.html')
+                .pipe(gulp.dest('dist')),
+            gulp.src('src/fonts/**/*')
+                .pipe(gulp.dest('dist/fonts')),
+            gulp.src('src/js/**/*')
+                .pipe(gulp.dest('dist/js')),
+            gulp.src('src/video/**/*')
+                .pipe(gulp.dest('dist/video'))
+        );
     }
 );
 

@@ -66,10 +66,3 @@
 	</div>
 	<!-- /go up arrow button -->
 
-	<script src="js/libs.min.js"></script>
-	<script src="libs/parallax.js-1.5.0/parallax.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/works.js"></script>
-</body>
-</html>
-
