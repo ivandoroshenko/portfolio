@@ -1,29 +1,73 @@
-var gulp         = require('gulp'),
-    sass         = require('gulp-sass'),
-    browserSync  = require('browser-sync'),
-    concat       = require('gulp-concat'),
-    uglify       = require('gulp-uglifyjs'),
-    csso         = require('gulp-csso'),
-    rename       = require('gulp-rename'),
-    del          = require('del'),
-    imagemin     = require('gulp-imagemin'),
-    pngquant     = require('imagemin-pngquant'),
-    plumber      = require('gulp-plumber'),
-    cache        = require('gulp-cache'),
-    autoprefixer = require('gulp-autoprefixer');
+const gulp         = require('gulp');
+const sass         = require('gulp-sass')(require('sass'));
+const browserSync  = require('browser-sync').create();
+const concat       = require('gulp-concat');
+const terser       = require('gulp-terser');
+const csso         = require('gulp-csso');
+const rename       = require('gulp-rename');
+const del          = require('del').deleteSync;
+const imagemin     = require('gulp-imagemin');
+const pngquant     = require('imagemin-pngquant');
+const plumber      = require('gulp-plumber');
+const cache        = require('gulp-cache');
+const autoprefixer = require('gulp-autoprefixer');
+const fileinclude  = require('gulp-file-include');
+const merge        = require('merge-stream');
 
+// Clean dist folder
+const clean = (done) => {
+    del('dist');
+    done();
+};
 
+// Include HTML components for root level HTML files
+const includeHTML = () => {
+    return gulp.src('*.html.template')
+        .pipe(plumber())
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: './'
+        }))
+        .pipe(rename(path => {
+            path.basename = path.basename.replace('.html', '');
+            path.extname = '.html';
+        }))
+        .pipe(gulp.dest('.'));
+};
 
-gulp.task('sass', function(){
+// Include HTML components for src directory HTML files
+const includeHTMLSrc = () => {
+    return gulp.src('src/*.html.template')
+        .pipe(plumber())
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: 'src'
+        }))
+        .pipe(rename(path => {
+            path.basename = path.basename.replace('.html', '');
+            path.extname = '.html';
+        }))
+        .pipe(gulp.dest('src'));
+};
+
+// Compile SCSS/SASS
+const sassCompile = () => {
     return gulp.src('src/sass/**/*.+(scss|sass)')
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 9', 'ie 10'], {cascade: true}))
-    .pipe(gulp.dest('src/css'))
-    .pipe(browserSync.reload({stream: true}))
-});
+        .pipe(plumber())
+        .pipe(sass({
+            quietDeps: true,
+            outputStyle: 'expanded'
+        }).on('error', sass.logError))
+        .pipe(autoprefixer({
+            overrideBrowserslist: ['last 15 versions', '> 1%'],
+            cascade: true
+        }))
+        .pipe(gulp.dest('src/css'))
+        .pipe(browserSync.stream());
+};
 
-gulp.task('scripts', function(){
+// Bundle and minify JS libraries
+const scripts = () => {
     return gulp.src([
         'src/libs/jquery/dist/jquery.min.js',
         'src/libs/parallax.js-1.5.0/parallax.min.js',
@@ -31,75 +75,137 @@ gulp.task('scripts', function(){
         'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
         'src/libs/slick-carousel/slick/slick.min.js'
     ])
-    .pipe(plumber())
-    .pipe(concat('libs.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('src/js'));
-});
+        .pipe(plumber())
+        .pipe(concat('libs.min.js'))
+        .pipe(terser())
+        .pipe(gulp.dest('src/js'));
+};
 
-gulp.task('css-libs', ['sass'], function(){
-    return gulp.src('src/css/libs.css') //сжатие css
-    .pipe(plumber())
-    .pipe(csso())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('src/css'));
-});
+// Minify CSS libs
+const cssLibs = () => {
+    return gulp.src('src/css/libs.css')
+        .pipe(plumber())
+        .pipe(csso())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('src/css'));
+};
 
-gulp.task('browser-sync', function(){
-    browserSync({
-        server: {
-            baseDir: 'src'
-    },
-    notify: false
-});
-});
-
-gulp.task('clear', function(){
-    return cache.clearAll();
-});
-
-gulp.task('clean', function(){
-    return del.sync('dist');
-});
-
-gulp.task('img', function(){
+// Optimize images
+const img = () => {
     return gulp.src('src/img/**/*')
-    .pipe(plumber())
+        .pipe(plumber())
         .pipe(cache(imagemin([
-            imagemin.gifsicle({ interlaced: true }),
-            imagemin.jpegtran({ progressive: true }),
-            imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.mozjpeg({quality: 75}),
+            imagemin.optipng({optimizationLevel: 5}),
+            pngquant({quality: [0.6, 0.8]}),
             imagemin.svgo({
                 plugins: [
-                    { removeViewBox: true },
-                    { cleanupIDs: false }
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
                 ]
             })
         ])))
-    .pipe(gulp.dest('src/img'));
-});
+        .pipe(gulp.dest('src/img'));
+};
 
-gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function(){
-    gulp.watch('src/sass/**/*.+(scss|sass)', ['css-libs'], )
-    gulp.watch('src/*.html', browserSync.reload)
-    gulp.watch('src/js/**/*.js', browserSync.reload)
-});
+// Clear cache
+const clearCache = () => {
+    return cache.clearAll();
+};
 
-gulp.task('build', ['clean', 'img', 'css-libs', 'scripts'], function(){
+// Browser sync
+const sync = () => {
+    browserSync.init({
+        server: {
+            baseDir: '.'
+        },
+        notify: false,
+        serveStatic: [
+            {
+                route: '/css',
+                dir: 'src/css'
+            },
+            {
+                route: '/js',
+                dir: 'src/js'
+            },
+            {
+                route: '/img',
+                dir: 'src/img'
+            },
+            {
+                route: '/fonts',
+                dir: 'src/fonts'
+            },
+            {
+                route: '/libs',
+                dir: 'src/libs'
+            },
+            {
+                route: '/video',
+                dir: 'src/video'
+            }
+        ]
+    });
+};
 
-var buildCss = gulp.src([
-    'src/css/main.css',
-    'src/css/libs.min.css',
-    'src/libs/slick-carousel/slick/fonts/**/*',
-    'src/libs/slick-carousel/slick/ajax-loader.gif'
-])
-    .pipe(gulp.dest('dist/css'));
-var buildHtml = gulp.src('src/*.html')
-        .pipe(gulp.dest('dist'));
+// Reload browser
+const reload = (done) => {
+    browserSync.reload();
+    done();
+};
 
-var buildFonts = gulp.src('src/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts'));
+// Watch files
+const watch = () => {
+    gulp.watch('src/sass/**/*.+(scss|sass)', gulp.series(sassCompile, cssLibs));
+    gulp.watch('*.html.template', gulp.series(includeHTML, reload));
+    gulp.watch('src/*.html.template', gulp.series(includeHTMLSrc, reload));
+    gulp.watch('src/components/**/*.html', gulp.series(includeHTML, includeHTMLSrc, reload));
+    gulp.watch('src/js/**/*.js', reload);
+};
 
-var buildJs = gulp.src('src/js/**/*')
-    .pipe(gulp.dest('dist/js'));
-});
+// Build for production
+const build = gulp.series(
+    clean,
+    gulp.parallel(img, cssLibs, scripts),
+    () => {
+        return merge(
+            gulp.src([
+                'src/css/main.css',
+                'src/css/libs.min.css',
+                'src/libs/slick-carousel/slick/fonts/**/*',
+                'src/libs/slick-carousel/slick/ajax-loader.gif'
+            ])
+                .pipe(gulp.dest('dist/css')),
+            gulp.src('src/*.html')
+                .pipe(gulp.dest('dist')),
+            gulp.src('src/fonts/**/*')
+                .pipe(gulp.dest('dist/fonts')),
+            gulp.src('src/js/**/*')
+                .pipe(gulp.dest('dist/js')),
+            gulp.src('src/video/**/*')
+                .pipe(gulp.dest('dist/video'))
+        );
+    }
+);
+
+// Development task
+const dev = gulp.series(
+    gulp.parallel(sassCompile, scripts),
+    cssLibs,
+    gulp.parallel(includeHTML, includeHTMLSrc),
+    gulp.parallel(sync, watch)
+);
+
+// Exports
+exports.sass = sassCompile;
+exports.scripts = scripts;
+exports.cssLibs = cssLibs;
+exports.img = img;
+exports.clear = clearCache;
+exports.clean = clean;
+exports.include = gulp.series(includeHTML, includeHTMLSrc);
+exports.build = build;
+exports.watch = dev;
+exports.default = dev;

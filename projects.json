@@ -1,0 +1,100 @@
+{
+  "projects": [
+    {
+      "title": "Dream House",
+      "image": "img/condev_preview.png",
+      "alt": "Dream House Portfolio",
+      "description": "A modern, responsive portfolio landing page for a construction/renovation company. This project demonstrates front-end development and UI skills from design mockup to fully functional, production-ready website.",
+      "tags": ["HTML", "CSS", "Responsive Design", "Front-End Development"],
+      "demo": "https://ivandoroshenko.github.io/condev/#"
+    },
+    {
+      "title": "Waxom",
+      "image": "img/waxom.jpg",
+      "alt": "Waxom CSS Demonstration",
+      "description": "Pure CSS elements demonstration without using JavaScript. Used for Workshop.",
+      "tags": ["HTML", "CSS", "Pure CSS"],
+      "demo": "https://ivandoroshenko.github.io/waxom/dist/"
+    },
+    {
+      "title": "Antibuks",
+      "image": "img/antibuks_preview.jpg",
+      "alt": "Antibuks Website",
+      "description": "New design for the site antibuks.com.ua. Create site from scratch including photoshop design, HTML/CSS, JS, responsive web design.",
+      "tags": ["HTML", "CSS", "JavaScript", "Responsive Design", "Photoshop Design"],
+      "demo": "https://ivandoroshenko.github.io/antibuks.com.ua/build/"
+    },
+    {
+      "title": "inlineskatecourse.com",
+      "image": "img/skate-fresh.jpg",
+      "alt": "Inline Skate Course",
+      "description": "Front-End for inlineskatecourse.com in cooperation with Denis Kliatskii. The project is responsive for all dimensions and orientations of mobile devices. Front-End is now live, using WordPress.",
+      "tags": ["HTML", "CSS", "JavaScript", "Responsive Design", "WordPress"],
+      "demo": "https://inlineskatecourse.com/"
+    },
+    {
+      "title": "Kauf",
+      "image": "img/kauf_preview.png",
+      "alt": "Kauf Multilingual Website",
+      "description": "2 languages website. Has 3 sliders, 2 of them with video. Creating website layout from PSD to HTML5 semantic markup, JS interaction and CSS3 stylisation, responsive UI design, optimization of page loading.",
+      "tags": ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Multilingual", "Video"],
+      "demo": "https://ivandoroshenko.github.io/kauf/src/"
+    },
+    {
+      "title": "SevenOaks",
+      "image": "img/sevenOaks-preview.jpg",
+      "alt": "SevenOaks Landing Page",
+      "description": "Responsive landing page with fullpage slider. Built as test task for one of the computer companies. Only pure CSS, HTML and jQuery were used. No plugins. Built on Gulp with SASS preprocessor.",
+      "tags": ["HTML", "CSS", "jQuery", "SASS", "Gulp", "Responsive Design"],
+      "demo": "https://ivandoroshenko.github.io/testGFL/src/#"
+    },
+    {
+      "title": "Motorcycle expedition company",
+      "image": "img/motorcycles_preview.jpg",
+      "alt": "Motorcycle Expedition Company",
+      "description": "Creating website layout from PSD to HTML5 semantic markup, JS interaction and CSS3 stylisation, responsive UI design.",
+      "tags": ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      "demo": "https://ivandoroshenko.github.io/motorcycle-expedition/dist/"
+    },
+    {
+      "title": "Pink",
+      "image": "img/pink_preview.jpg",
+      "alt": "Pink Multipage Application",
+      "description": "Multipage full responsive application design, available from tablet, mobile and desktop. Team-leading with Git creating layout in a team.",
+      "tags": ["HTML", "CSS", "Responsive Design", "Team Collaboration", "Git"],
+      "demo": "https://ivandoroshenko.github.io/pink/dist/"
+    },
+    {
+      "title": "Active-Box",
+      "image": "img/acivebox.jpg",
+      "alt": "Active-Box Landing Page",
+      "description": "Creating website layout on HTML5 semantic from PSD, CSS3 stylisation, responsive UI design.",
+      "tags": ["HTML5", "CSS3", "Responsive Design"],
+      "demo": "https://ivandoroshenko.github.io/activebox/dist/"
+    },
+    {
+      "title": "Hosting",
+      "image": "img/hosting_preview.jpg",
+      "alt": "Hosting Website",
+      "description": "JS interaction on the base of already built page.",
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "demo": "https://ivandoroshenko.github.io/hosting/#"
+    },
+    {
+      "title": "Glazer",
+      "image": "img/glazer_preview.jpg",
+      "alt": "Glazer Landing Page",
+      "description": "Simple landing page with excellent UI design, CSS3 stylisation, responsive UI design.",
+      "tags": ["HTML", "CSS3", "Responsive Design", "UI Design"],
+      "demo": "https://ivandoroshenko.github.io/glazer/#"
+    },
+    {
+      "title": "Midnight",
+      "image": "img/midnight_preview.jpg",
+      "alt": "Midnight Portfolio",
+      "description": "Creating website layout on HTML5 semantic from PSD, CSS3 stylisation, responsive UI designs.",
+      "tags": ["HTML5", "CSS3", "Responsive Design"],
+      "demo": "https://ivandoroshenko.github.io/midnight/#"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Anti-flicker snippet (recommended)  -->
+	<style>
+		.async-hide {
+			opacity: 0 !important
+		}
+	</style>
+	<script>(function (a, s, y, n, c, h, i, d, e) {
+		s.className += ' ' + y; h.start = 1 * new Date;
+			h.end = i = function () { s.className = s.className.replace(RegExp(' ?' + y), '') };
+			(a[n] = a[n] || []).hide = h; setTimeout(function () { i(); h.end = null }, c); h.timeout = c;
+		})(window, document.documentElement, 'async-hide', 'dataLayer', 4000,
+			{ 'GTM-5WWLQHN': true });</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113151691-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+
+	gtag('config', 'UA-113151691-1', { 'optimize_id': 'GTM-5WWLQHN' });
+</script>
+
+	<meta charset="UTF-8">
+	<meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile specific metas
+    ============================================ -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/ivandoroshenko-favicon.png" type="image/png">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+	<title>Ivan Doroshenko</title>
+	
+</head>
+<body>
+	<!-- header with social and navigation -->
+<header class="header">
+	<nav class="nav"> <!-- navigation and soials -->	
+		<ul class="nav__list"><!-- header navigation -->
+			<li class="nav__item"><a href="#works" class="nav__link">Works</a></li>
+			<li class="nav__item"><a href="#contacts" class="nav__link" >Contacts</a></li>
+		</ul>
+	</nav>
+</header>
+
+
+	<main class="maincontent"> <!-- maincontent -->
+
+		<!-- intro section -->
+<section class="intro" id="intro-parallax">
+	<video poster="video/Heaven/Heaven.jpg" id="bg__video" class="bg__video" autoplay="true" muted loop preload="auto" data-depth="0.2">
+		<source src="video/Heaven/Heaven.webm" type="video/webm">
+		<source src="video/Heaven/Heaven.mp4" type="video/mp4">
+		<source src="video/Heaven/Heaven.ogv" type="video/ogv"> Your browser does not support HTML5 video.
+	</video>
+	<img src="./video/Heaven/Heaven.jpg" class="bg__video" data-depth="0.1">
+	<div class="container intro__container" data-depth="0.5">
+		<p class="intro__text">Ladies and gentlemen, let me introduce</p>
+		<h1 class="intro__title">Ivan Doroshenko</h1>
+		<h2 class="intro__sub-title">Shopify & Front-end developer</h2>
+	</div>
+</section>
+
+
+		<!-- scroll down indicator -->
+			<div class="scroll-indicator">
+		<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#e84c3d" viewBox="0 0 48 48">
+			<path d="M33.17 17.17L24 26.34l-9.17-9.17L12 20l12 12 12-12z" />
+		</svg>
+	</div>
+		<!-- /scroll down indicator -->
+		
+	</main> <!-- mainconent -->
+	
+	<!-- works -->
+	<!-- works section -->
+<section class="works" id="works">
+  <!-- Works are dynamically injected here from projects.json via works.js -->
+</section>
+
+
+	<!-- contacts -->
+	<!-- contacts section -->
+<div class="contacts" id="contacts">
+	<div class="container">
+		<!-- social links -->
+		<ul class="social__list">
+			<li class="social__item">
+				<a class="social__link" target="_blank" href="https://www.linkedin.com/in/ivan-doroshenko/">
+					<i class="fa fa-linkedin" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li class="social__item">
+				<a class="social__link" target="_blank" href="https://github.com/ivandoroshenko">
+					<i class="fa fa-github" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li class="social__item">
+				<a class="social__link" target="_blank" href="https://www.upwork.com/o/profiles/users/_~013c04b23a80171f7a/">
+					<svg id="Layer_1" style="fill: #333;  width: 40px; 	enable-background:new 0 0 56.7 56.7;" version="1.1" viewBox="0 0 56.7 56.7"
+					 xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g>
+							<path d="M38.8,24.6c-2.8,0-3.7,2.7-3.9,4.3v0.1l-0.4,1.5c1.2,1,2.7,1.7,4.2,1.7c2,0,3.8-1.7,3.9-3.9C42.6,26.3,40.9,24.6,38.8,24.6   z"
+							/>
+							<path d="M28.9,3.7C15.2,3.7,4.1,14.8,4.1,28.5c0,13.7,11.1,24.8,24.8,24.8c13.7,0,24.8-11.1,24.8-24.8C53.7,14.8,42.6,3.7,28.9,3.7   z M38.8,36.1c-2,0-3.7-0.6-5.2-1.5l-1.7,8H28l2.4-11c-1-1.4-2-3-2.7-4.5v1.7c0,4.1-3.3,7.4-7.3,7.4c-4,0-7.3-3.3-7.3-7.4v-10h3.8   v10c0,2,1.6,3.6,3.6,3.6c2,0,3.6-1.6,3.6-3.6v-10h3.8c0.8,2.5,2.1,5.5,3.8,8.2c1-3.8,3.8-6.1,7.3-6.1c4.1,0,7.5,3.4,7.5,7.5   C46.3,32.7,42.9,36.1,38.8,36.1z"
+							/>
+						</g>
+					</svg>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+	<!-- footer -->
+	<!-- footer section -->
+<footer class="footer">
+	<div class="container footer__container">
+		<ul class="contacts__list">
+		<li class="contacts__item"><h2 class="footer__sub-title">designed and developed by</h2></li>
+		<li class="contacts__item"><h1 class="footer__title">Ivan Doroshenko</h1></li>
+		<li class="contacts__item">
+			<img src="img/icon__emal.png" alt="Email" class="footer-contacts__icon--email">
+				<address class="contacts-adress">
+					<a href="mailto:ivandoroshenko1988@gmail.com" class="footer-contacts-address__link">ivandoroshenko1988@gmail.com</a>
+				</address>
+		</li>
+	</ul>
+	</div>
+</footer>
+
+
+	<div class="btn-up">
+		<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#e84c3d" viewBox="0 0 48 48">
+			<path d="M14.83 30.83L24 21.66l9.17 9.17L36 28 24 16 12 28z" />
+		</svg>
+	</div>
+	<!-- /go up arrow button -->
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/works.js"></script>
+</body>
+</html>
