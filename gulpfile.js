@@ -184,6 +184,8 @@ const build = gulp.series(
                 .pipe(gulp.dest('dist/fonts')),
             gulp.src('src/js/**/*')
                 .pipe(gulp.dest('dist/js')),
+            gulp.src('src/img/**/*')
+                .pipe(gulp.dest('dist/img')),
             gulp.src('src/video/**/*')
                 .pipe(gulp.dest('dist/video'))
         );
