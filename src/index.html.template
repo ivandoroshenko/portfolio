@@ -66,3 +66,8 @@
 	</div>
 	<!-- /go up arrow button -->
 
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/works.js"></script>
+</body>
+</html>
