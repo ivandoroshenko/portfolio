@@ -48,6 +48,9 @@
 
 		@@include('./components/intro.html')
 
+		<!-- scroll down indicator -->
+		@@include('./components/scroll-down-indicator.html')
+
 		<!-- works -->
 		@@include('./components/works.html')
 
