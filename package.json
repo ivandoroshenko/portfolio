@@ -4,7 +4,7 @@
   "description": "my exam gulp project",
   "main": "gulpfile.js",
   "devDependencies": {
-    "browser-sync": "^2.29.0",
+    "browser-sync": "^3.0.4",
     "del": "^7.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
